@@ -21,7 +21,7 @@ jobs:
       - name: Build firmwares
         run: FIRMWARE_VERSION=${{github.ref_name}} platformio run
       - name: Archive
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: firmware
           path: .pio/build/*/firmware_*.bin
